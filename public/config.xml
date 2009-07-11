@@ -1,0 +1,6 @@
+﻿<config>
+  <plugins>revolt-1</plugins>
+  <width>500</width>
+  <displayclick>none</displayclick>
+  <repeat>always</repeat>
+</config>

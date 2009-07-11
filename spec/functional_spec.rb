@@ -22,4 +22,11 @@ describe "private.deadblackhearts.com" do
     last_response.status.should eql(404)
   end
   
+  it "should add script tags" do
+    get "/"
+    last_response.body.should include("jquery.js")
+    last_response.body.should include("go.js")
+  end
+  
 end
+

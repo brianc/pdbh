@@ -5,8 +5,8 @@ class App < Sinatra::Default
       paths.map { |path| "<script type='text/javascript' src='#{path}'></script>" }.join
     end
     
-    def partial(name, obj)
-      haml name, :layout => false
+    def render_folders(folders=Dir.dirname(__FILE__)+"/public/audio")
+      
     end
   end
   get "/" do
