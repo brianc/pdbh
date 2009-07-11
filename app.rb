@@ -14,6 +14,7 @@ class App < Sinatra::Default
     def render_folder(folder=::File.dirname(__FILE__)+"/public/audio")
       buff = "<li>#{folder.split('/').last}</li>"
       buff << "<ul>"
+
       Dir.chdir(folder) do
         Dir.glob("**") do |f|
           if(::File.directory?(f))
