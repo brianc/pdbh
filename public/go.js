@@ -14,6 +14,7 @@ function playerReady(obj){
   player.addControllerListener("ITEM","x");
   $("a").click(function(){
     player.sendEvent("LOAD",this.href);
+    player.sendEvent("PLAY");
     return false;
   });
 }
