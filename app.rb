@@ -1,3 +1,5 @@
+$LOAD_PATH << File.dirname(__FILE__)+"/vendor/rack/lib"
+$LOAD_PATH << File.dirname(__FILE__)+"/vendor/sinatra/lib"
 require 'sinatra'
 class App < Sinatra::Default
   helpers do
