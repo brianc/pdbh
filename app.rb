@@ -18,7 +18,8 @@ class App < Sinatra::Default
       buff << "<ul>"
 
       Dir.chdir(folder) do
-        Dir.glob("**") do |f|
+        files = Dir.glob("**")
+        files.sort.each do |f|
           if(::File.directory?(f))
             buff << render_folder(f)
           else
