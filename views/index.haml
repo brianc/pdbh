@@ -4,13 +4,9 @@
     %title private.deadblackhearts.com
     %link{:rel => 'stylesheet',:type=>'text/css',:href=>'main.css'}
   %body
-    %table
-      %tr
-        %td{:width => '50%'}
-          %ul
-            = render_folder
-        %td
-          #mediaspace
-    = script('jquery.js','swfobject.js','go.js')
+    #mediaspace
+    %ul
+      = render_folder
+  = script('jquery.js','swfobject.js','go.js')
 
 
