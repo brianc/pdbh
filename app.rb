@@ -9,7 +9,7 @@ class App < Sinatra::Default
     
     def render_file(file)
       file_path = ::File.join(Dir.pwd,file)
-      rel_path = file_path.gsub(::File.dirname(__FILE__)+"/public","")
+      rel_path = file_path.gsub(/.*\/public/,"")
       "<li><a href='#{rel_path}'>#{file}</a></li>"
     end
 
